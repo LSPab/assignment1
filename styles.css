@@ -1,31 +1,116 @@
-body {
+/* Reset some default styles */
+* {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#wrapper {
+/* Styling the header */
+.header {
+    display: flex;
+    /* Use flexbox to arrange links horizontally */
+    justify-content: space-between;
+    /* Evenly spaces out the links */
+    align-items: center;
+    /* Vertically center the links */
+    background-color: rgb(15, 0, 0);
+    /* Set the background color to red */
+    width: 100%;
+    /* Make sure the header spans the entire width of the screen */
+    padding: 10px 400px;
+    /* Add some padding to the header for spacing */
+}
+
+/* Styling for the links */
+.link {
+    color: white;
+    /* Set link text color to white */
+    text-decoration: none;
+    /* Remove underline from the links */
+    font-size: 1.5rem;
+    /* Adjust the font size */
+    font-weight: bold;
+    /* Make the text bold */
+}
+
+/* Container for the grid layout */
+.container {
     display: grid;
-    height: 300vh;
-    grid-template-rows: 5vh 45vh 5vh 45vh 5vh 45vh 5vh 45vh 5vh 45vh 5vh 45vh;
+    /* Enable grid layout */
+    grid-template-columns: 1fr 1fr;
+    /* Divide the screen into two equal columns */
+    height: 100vh;
+    /* Full viewport height */
+    grid-gap: 0;
+    /* No gap between the columns */
 }
 
-nav#partred {
-    background-color: rgba(231, 76, 60, 1);
+/* Style for the image area */
+.image-area {
+    background-color: #f0f0f0;
+    /* Optional: background color for the image area */
     display: flex;
     justify-content: center;
-    justify-content: space-between;
-    gap: 7vw;
+    align-items: center;
+    overflow: hidden;
+    /* Ensures image stays within bounds */
 }
 
-.center {
+.image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure image covers the whole area without distortion */
+}
+
+/* Style for the text area */
+.text-area {
+    padding: 20px;
+    /* Add some padding around the text */
+    background-color: #e74c3c;
+    /* White background for the text area */
     display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    gap: 7vw;
+    flex-direction: column;
+    justify-content: start;
+    /* Center the text vertically */
 }
 
-nav {
-    grid-area: nav;
-    justify-self: center;
-    width: 80vw;
+.text-area h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.text-area p {
+    font-size: 1.2rem;
+}
+
+/* Image area with the gradient fade */
+.image-area {
+    position: relative;
+    width: 100%;
+    /* Adjust the image container width as needed */
+    height: 100%;
+}
+
+.image-area img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* Ensures the image covers the container without distortion */
+}
+
+/* Adding the gradient fade */
+.image-area::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 40%;
+    /* Start the fade from the middle of the image */
+    background: linear-gradient(to right, transparent, rgba(231, 76, 60, 1));
+    /* Fades from transparent to red */
+    pointer-events: none;
+    /* Prevents interaction with the overlay */
 }
