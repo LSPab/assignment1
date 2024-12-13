@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#wrapper {
+    display: grid;
+    height: 300vh;
+    grid-template-rows: 5vh 45vh 5vh 45vh 5vh 45vh 5vh 45vh 5vh 45vh 5vh 45vh;
+}
+
+nav#partred {
+    background-color: rgba(231, 76, 60, 1);
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 7vw;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 7vw;
+}
+
+nav {
+    grid-area: nav;
+    justify-self: center;
+    width: 80vw;
+}
