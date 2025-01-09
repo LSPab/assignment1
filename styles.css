@@ -14,11 +14,27 @@
     align-items: center;
     /* Vertically center the links */
     background-color: rgb(15, 0, 0);
-    /* Set the background color to red */
+    /* Set the background color to black */
     width: 100%;
     /* Make sure the header spans the entire width of the screen */
     padding: 10px 400px;
     /* Add some padding to the header for spacing */
+}
+
+.footer {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: rgb(0, 0, 0);
+
+    width: 100%;
+
+    height: 40px;
+
+    padding: 10px 400px;
 }
 
 /* Styling for the links */
@@ -113,4 +129,121 @@
     /* Fades from transparent to red */
     pointer-events: none;
     /* Prevents interaction with the overlay */
+}
+
+.text-colour {
+    color: #ffffff;
+}
+
+.font1 {
+    font-family: ;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: #e74c3c;
+    border-radius: 25px;
+    margin: 5px;
+
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 400px;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 20px;
+}
+
+.body-1 {
+    display: flex;
+    border: 8px solid black;
+    gap: 145px;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.body2 {
+    display: flex;
+    flex-direction: column;
+    /* Stack images vertically */
+    margin-bottom: 50px;
+    height: 1000px;
+}
+
+/* Style for the image area without fade */
+.image-area2 {
+    background-color: #e74c3c;
+    /* Optional: background color for the image area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ensures image stays within bounds */
+    height: max-content;
+}
+
+.container2 {
+    display: grid;
+    /* Enable grid layout */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Divide the screen into three equal columns */
+    height: 100vh;
+    /* Full viewport height */
+    grid-gap: 0;
+    /* No gap between the columns */
+}
+
+.text-colour-black {
+    color: black;
+}
+
+.footer img {
+    height: 100px;
+    width: auto;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.box-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.phone-number {
+    font-size: 1rem;
+    color: white;
+}
+
+.box .image-container {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.box .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
