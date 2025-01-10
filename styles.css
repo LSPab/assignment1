@@ -149,7 +149,8 @@ body {
     align-items: center;
     flex-direction: column;
     height: 400px;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     background-color: #ffffff;
     border-radius: 25px;
     margin: 5px;
@@ -159,7 +160,7 @@ body {
 .body1 {
     display: flex;
     gap: 145px;
-    border: 60px solid salmon;
+    border: 60px solid #5B0000;
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
@@ -171,6 +172,7 @@ body {
     flex-direction: column;
     margin-bottom: 50px;
     height: 1000px;
+    overflow: hidden;
 }
 
 /* Image area without fade */
@@ -180,7 +182,9 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: max-content;
+    height: auto;
+    width: auto;
+    flex: 1;
 }
 
 /* Grid layout for three columns */
@@ -192,6 +196,8 @@ body {
     grid-gap: 0;
     grid-template-rows: auto;
     flex-grow: 1;
+    overflow: hidden;
+    flex: 1;
 }
 
 /* Reset margin and padding for container2 content */
