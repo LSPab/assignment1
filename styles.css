@@ -1,94 +1,102 @@
-/* Reset some default styles */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Styling the header */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure body takes up full viewport height */
+    margin: 0;
+}
+
+/* Header styling */
 .header {
     display: flex;
-    /* Use flexbox to arrange links horizontally */
     justify-content: space-between;
-    /* Evenly spaces out the links */
+    /* Space links evenly */
     align-items: center;
-    /* Vertically center the links */
+    /* Center the items vertically */
     background-color: rgb(15, 0, 0);
-    /* Set the background color to black */
+    /* Header background color */
     width: 100%;
-    /* Make sure the header spans the entire width of the screen */
     padding: 10px 400px;
-    /* Add some padding to the header for spacing */
+    /* Add padding for spacing */
 }
 
+.header-image {
+    height: 40px;
+    width: auto;
+    margin-right: 20px;
+    /* Spacing between image and links */
+}
+
+/* Footer styling */
 .footer {
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     background-color: rgb(0, 0, 0);
-
     width: 100%;
-
     height: 40px;
-
     padding: 10px 400px;
 }
 
-/* Styling for the links */
 .link {
     color: white;
-    /* Set link text color to white */
     text-decoration: none;
-    /* Remove underline from the links */
+    /* Remove underline */
     font-size: 1.5rem;
-    /* Adjust the font size */
+    /* Font size for links */
     font-weight: bold;
-    /* Make the text bold */
+    /* Make text bold */
 }
 
-/* Container for the grid layout */
+/* Container for grid layout */
 .container {
     display: grid;
-    /* Enable grid layout */
-    grid-template-columns: 1fr 1fr;
-    /* Divide the screen into two equal columns */
+    grid-template-columns: 50% 50%;
+    /* Two equal columns */
+    grid-template-rows: 1fr;
     height: 100vh;
     /* Full viewport height */
     grid-gap: 0;
-    /* No gap between the columns */
+    /* No gap between columns */
 }
 
-/* Style for the image area */
+/* Image area styling */
 .image-area {
     background-color: #f0f0f0;
-    /* Optional: background color for the image area */
+    /* Background color */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Ensures image stays within bounds */
 }
 
 .image-area img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensure image covers the whole area without distortion */
+    /* Ensure image fills the area without distortion */
 }
 
-/* Style for the text area */
+/* Text area styling */
 .text-area {
     padding: 20px;
-    /* Add some padding around the text */
     background-color: #e74c3c;
-    /* White background for the text area */
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    /* Center the text vertically */
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    /* Ensure text stays above the background */
+    height: 100%;
 }
 
 .text-area h1 {
@@ -100,23 +108,7 @@
     font-size: 1.2rem;
 }
 
-/* Image area with the gradient fade */
-.image-area {
-    position: relative;
-    width: 100%;
-    /* Adjust the image container width as needed */
-    height: 100%;
-}
-
-.image-area img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    /* Ensures the image covers the container without distortion */
-}
-
-/* Adding the gradient fade */
+/* Gradient fade styling for image */
 .image-area::after {
     content: '';
     position: absolute;
@@ -124,39 +116,37 @@
     right: 0;
     bottom: 0;
     left: 40%;
-    /* Start the fade from the middle of the image */
+    /* Fade starts from the middle */
     background: linear-gradient(to right, transparent, rgba(231, 76, 60, 1));
-    /* Fades from transparent to red */
+    /* Fade effect */
     pointer-events: none;
-    /* Prevents interaction with the overlay */
+    /* Prevent interaction with overlay */
 }
 
 .text-colour {
     color: #ffffff;
 }
 
-.font1 {
-    font-family: ;
-}
-
+/* Box styling */
 .box {
     display: flex;
-    justify-content: center;
     justify-content: space-evenly;
     align-items: center;
-    height: 200px;
+    height: 300px;
     width: 200px;
     background-color: #e74c3c;
     border-radius: 25px;
     margin: 5px;
-
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    border: 15px #e74c3c solid;
 }
 
 .box2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
     flex-direction: column;
     height: 400px;
     width: 250px;
@@ -166,45 +156,48 @@
     padding: 20px;
 }
 
-.body-1 {
+.body1 {
     display: flex;
-    border: 8px solid black;
     gap: 145px;
+    border: 60px solid salmon;
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .body2 {
     display: flex;
     flex-direction: column;
-    /* Stack images vertically */
     margin-bottom: 50px;
     height: 1000px;
 }
 
-/* Style for the image area without fade */
+/* Image area without fade */
 .image-area2 {
     background-color: #e74c3c;
-    /* Optional: background color for the image area */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Ensures image stays within bounds */
     height: max-content;
 }
 
+/* Grid layout for three columns */
 .container2 {
     display: grid;
-    /* Enable grid layout */
     grid-template-columns: 1fr 1fr 1fr;
-    /* Divide the screen into three equal columns */
-    height: 100vh;
-    /* Full viewport height */
+    /* Three equal columns */
+    height: 100%;
     grid-gap: 0;
-    /* No gap between the columns */
+    grid-template-rows: auto;
+    flex-grow: 1;
+}
+
+/* Reset margin and padding for container2 content */
+.container2>div {
+    margin: 0;
+    padding: 0;
 }
 
 .text-colour-black {
@@ -212,15 +205,16 @@
 }
 
 .footer img {
-    height: 100px;
+    height: 40px;
     width: auto;
+    margin-right: 20px;
 }
 
+/* Box content styling */
 .box-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
 }
 
 .box-title {
@@ -235,15 +229,123 @@
     color: white;
 }
 
+/* Image container in box */
 .box .image-container {
     width: 100%;
-    height: 60%;
+    height: 80%;
     overflow: hidden;
     border-radius: 15px;
+    position: relative;
 }
 
 .box .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Support container styling */
+.support-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.support-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="tel"],
+input[type="text"] {
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+/* Submit button styling */
+.submit-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: rgb(15, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: rgb(20, 0, 0);
+}
+
+/* Button container styling */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+/* Link styled as a button */
+.button a {
+    font-size: 30px;
+    border-radius: 25px;
+    padding: 15px 30px;
+    background-color: #e74c3c;
+    /* Red background */
+    color: white;
+    text-decoration: none;
+    /* Remove underline */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.button a:hover {
+    background-color: #c0392b;
+    /* Darker red on hover */
+}
+
+/* Custom link styling */
+.custom-link {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    /* Remove underline */
 }
